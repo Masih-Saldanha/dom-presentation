@@ -72,6 +72,10 @@ button {
     margin-bottom: 10px;
     align-self: center;
 }
+.ultima-imagem {
+    width: 600px;
+    height: 490px;
+}
 
 /* CLASSE PARA ESCONDER ELEMENTOS */
 .escondido {
