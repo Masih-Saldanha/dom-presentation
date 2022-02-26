@@ -26,5 +26,5 @@ function voltarArtigo(numeroArtigo) {
 // const ULTIMA_IMAGEM = LISTA_ARTIGOS[1].childNodes[NUMERO];
 
 function descaAteOFinal() {
-    window.scrollTo(0, 1000);
+    window.scrollTo(0, 5000);
 }
