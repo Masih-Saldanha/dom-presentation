@@ -13,3 +13,18 @@ function voltarMenuPrincipal(numeroArtigo) {
     LISTA_ARTIGOS[numeroArtigo].classList.add("escondido")
     MENU.classList.remove("escondido")
 }
+
+function avancarArtigo(numeroArtigo) {
+    LISTA_ARTIGOS[numeroArtigo].classList.add("escondido")
+    LISTA_ARTIGOS[numeroArtigo+1].classList.remove("escondido")
+}
+
+function voltarArtigo(numeroArtigo) {
+    LISTA_ARTIGOS[numeroArtigo].classList.add("escondido")
+    LISTA_ARTIGOS[numeroArtigo-1].classList.remove("escondido")
+}
+// const ULTIMA_IMAGEM = LISTA_ARTIGOS[1].childNodes[NUMERO];
+
+function descaAteOFinal() {
+    window.scrollTo(0, 1000);
+}
