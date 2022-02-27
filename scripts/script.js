@@ -3,6 +3,11 @@ const LISTA_ARTIGOS = [];
 for (i = 0; i < 7; i++) {
     LISTA_ARTIGOS[i] = document.querySelector(`.artigo-${i}`);
 }
+const DIV = document.querySelector(".div");
+
+console.log(MENU);
+console.log(LISTA_ARTIGOS);
+console.log(DIV);
 
 function alternarMenuArtigo(numeroArtigo) {
     LISTA_ARTIGOS[numeroArtigo].classList.toggle("escondido")
