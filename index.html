@@ -19,31 +19,31 @@
     <main class="escondido">
         <h1>Sejam bem-vindos a aula de DOM!</h1>
         <ul>Hoje entederemos melhor o que é o DOM, suas características e funcionalidades:
-            <li onclick="acessarArtigo(0)" class="opcao-0 conceito-dom">
+            <li onclick="alternarMenuArtigo(0)" class="opcao-0 conceito-dom">
                 - O que é DOM?
             </li>
 
-            <li onclick="acessarArtigo(1)" class="opcao-1 objetos-window-e-document">
+            <li onclick="alternarMenuArtigo(1)" class="opcao-1 objetos-window-e-document">
                 - O que são os objetos "window" e "document"?
             </li>
 
-            <li onclick="acessarArtigo(2)" class="opcao-2 diferenca-getelement-queryselector">
+            <li onclick="alternarMenuArtigo(2)" class="opcao-2 diferenca-getelement-queryselector">
                 - Diferença de "getElementById", "getElementsByClassName", "querySelector", "querySelectorAll"
             </li>
 
-            <li onclick="acessarArtigo(3)" class="opcao-3 conceito-element">
+            <li onclick="alternarMenuArtigo(3)" class="opcao-3 conceito-element">
                 - O que é um "Element" no JavaScript?
             </li>
 
-            <li onclick="acessarArtigo(4)" class="opcao-4 diferenca-innerhtml-innertext-textcontent">
+            <li onclick="alternarMenuArtigo(4)" class="opcao-4 diferenca-innerhtml-innertext-textcontent">
                 - Diferença de "innerHTML", "innerText" e "textContent"
             </li>
 
-            <li onclick="acessarArtigo(5)" class="opcao-5 diferenca-nodelist-array">
+            <li onclick="alternarMenuArtigo(5)" class="opcao-5 diferenca-nodelist-array">
                 - Qual a diferença entre uma "NodeList" e uma array comum? Como transformar a "NodeList" em uma array?
             </li>
 
-            <li onclick="acessarArtigo(6)" class="opcao-6 document-createelement-appendchild">
+            <li onclick="alternarMenuArtigo(6)" class="opcao-6 document-createelement-appendchild">
                 - Como criar elementos via JavaScript com "document.createElement" e "element.appendChild"
             </li>
         </ul>
@@ -51,74 +51,127 @@
 
     <article class="escondido artigo-0">
         <h1>O que é DOM?</h1>
+
         <h2>DOM significa "Document Object Model", em uma tradução livre seria algo como "Modelo de Objeto de
             Documento", mas o que isso significa?</h2>
         <h2>Resumidamente é uma forma do Java Script receber uma informação do HTML e conseguir trabalhar com ela, ou
             seja, o Java Script que, a princípio, seria incapaz de manipular qualquer elemento do HTML agora pode
             fazê-lo através do DOM.</h2>
         <h2>Podemos averiguar isso a partir da imagem abaixo:</h2>
+
         <h3>Aqui temos a estrura HTML do menu principal desta apresentação</h3>
         <img src="assets/exemplo_dom_1.PNG">
+
         <h3>Já aqui temos a criação de uma constante global "MENU" que recebe como valor a tag "main" do documento HTML
         </h3>
         <img src="assets/exemplo_dom_2.PNG">
+
         <h2>A partir disso, podemos usar "MENU" no Java Script para, dinamicamente, manipular o próprio "main", tags que
             estejam dentro dele, ou até mesmo alterar seu estilo.</h2>
 
         <footer class="botoes">
-            <button onclick="voltarMenuPrincipal(0)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(0)">Voltar ao menu Principal</button>
             <button onclick="avancarArtigo(0)">Próximo tópico</button>
         </footer>
     </article>
 
     <article class="escondido artigo-1">
         <h1>O que são os objetos "window" e "document"?</h1>
+
         <h2>Agora que entendemos um pouco melhor o conceito básico de DOM podemos seguir para a definição de "Window" e "Document".</h2>
 
         <h4>- Document:</h4>
+
         <img src="assets/exemplo_dom_2.PNG">
+
         <h3>Retomando o exemplo anterior, vimos que "MENU" está armazenando a tag "main" para futura manipulação no Java Script.</h3>
         <h3>Sendo assim, ("main") representa a tag selecionada em si;</h3>
         <h3>Já "QuerySelector" é, como o próprio nome sugere, o seletor que busca a tag ou classe, mas isso trataremos nos próximos tópicos;</h3>
         <h3>Por fim temos "document" que é a representação do documento HTML inteiro dentro do Java Script.</h3>
+
         <h2>Ou seja, toda vez que chamamos "document" dentro do Java, estamos em última instância fazendo uma busca em todo o HTML ao qual o Script está relacionado.</h2>
 
         <h4>- Window:</h4>
+
         <h2>Enquanto "Document" representa o HTML em si, "Window" representa a janela a qual o usuário está acessando o conteúdo. Um dos comandos mais comuns e que usaremos de exemplo do uso de "Window" é o "window.scrollTo(x, y)" o qual scrolla a tela de exibição diretamente para o valor de "x" na horizontal e para o valor de "y" na vertical. Considere as imagens abaixo:</h2>
+
         <h3>Aqui temos a função que ao ser ativada, deve scrollar a tela do navegador 1000 pixels para baixo:</h3>
         <img src="assets/exemplo_dom_3.PNG">
+
         <h3>Já aqui temos o botão que chamará a função ao ser clicado:</h3>
         <img src="assets/exemplo_dom_4.PNG">
 
         <h3>Agora clique no botão abaixo para testar</h3>
         <button onclick="descaAteOFinal()">Clique para ativar a função de scrollar</button>
-        <img class="ultima-imagem" src="assets/ultima_imagem.gif">
 
+        <img class="ultima-imagem" src="assets/ultima_imagem.gif">
         <h1>GIT GUD!</h1>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(1)">Voltar tópico</button>
-            <button onclick="voltarMenuPrincipal(1)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(1)">Voltar ao menu Principal</button>
             <button onclick="avancarArtigo(1)">Próximo tópico</button>
         </footer>
     </article>
 
-    <article class="artigo-2">
+    <article class="escondido artigo-2">
         <h1>Diferença de "getElementById", "getElementsByClassName", "querySelector", "querySelectorAll"</h1>
+
+        <h2>Esses comandos são seletores e servem (como o nome sugere) para selecionar qual ou quais elementos do HTML serão selecionados para manipulação pelo Java Script.</h2>
+        <h2>Além disso, é necessário compreender que esses seletores resgatam "nodes" a partir do HTML, mas isso veremos nos próximos tópicos, por enquanto concentremos nos seletores.</h2>
+
+        <h4>- "querySelector(" ")":</h4>
+
+        <h2>Resumidamente ele busca a primeira tag ou classe descrita dentro do (" ") sendo que classes precisam ser precedidas de ponto para que possam ser buscadas.</h2>
+        <h2>Vejamos o seguinte exemplo:</h2>
+
+        <h3>Aqui vemos a lista de Artigos dessa apresentação</h3>
+        <img src="assets/exemplo_dom_5.png">
+
+        <h3>Agora tentemos usar os seguitnes comandos no console do browser:</h3>
+        <img src="assets/exemplo_dom_6.png">
+
+        <h2>Como pudemos observar, apesar de haverem 7 articles, o ARTIGO_0 armazenou apenas o primeiro article. No entanto, se precisássemos armazenar todos os articles precisaríamos do próximo comando -></h2>
+
+        <h4>- "querySelectorAll(" ")":</h4>
+
+        <h2>Basicamente é a mesma coisa que o "querySelector" com a diferença que ele não seleciona apenas a primeira tag ou classe e sim todas com o mesmo nome, vejamos o exemplo:</h2>
+
+        <h3>Mais uma vez vamos ao console testar os seguintes comandos:</h3>
+        <img src="assets/exemplo_dom_7.png">
+
+        <h2>Como podemons observar, a constante "ARTIGOS" está armazenando todos os "articles" presentes no HTML de forma semelhante a um array, porém NÃO É UM ARRAY e portanto não pode receber alguns comandos exclusivos de arrays como as HOF.</h2>
+        <h2>Além disso, é possível selecionar um dos elementos específicos ou iterá-los de forma semelhante a um array adicionando [índice] ao final de "ARTIGOS".</h2>
+
+        <h4>- "getElementById(" ")":</h4>
+
+        <h2>É praticamente a mesma coisa do "querySelector" com a diferença sendo que ao invés de selecionar a primeira tag ou classe escolhida, ela seleciona a primeira "id" escolhida.</h2>
+        
+        <h4>- "getElementsByClassName(" ")":</h4>
+
+        <h2>Por fim, temos o "getElementsByClassName(" ")" que seleciona os elementos HTML que tem as classes específicas escolhidas. Vejamos os exemplos para uma melhor compreensão:</h2>
+
+        <h3>Aqui, o parâmetro escolhido foi a classe "escondido", por isso a constante "ESCONDIDOS" recebeu uma HTMLCollection (um objeto com cada propriedade sendo um dos elementos selecionados e sendo cada um enumerado de forma semelhante a um array).</h3>
+        
+        <h3>Repare que "ESCONDIDOS" funciona de forma parecida com os arrays e nodes, porém (assim como os nodes) não pode receber comandos específicos de arrays como as HOF, mas ainda pode ser iterada com [índice] assim como os nodes.</h3>
+        <img src="assets/exemplo_dom_8.png">
+
+        <h3>Já no exemplo abaixo, vemos que a constante "ESCONDIDO_0" armazenou apenas um article como objeto de um HTMLCollection, isso ocorreu pois apenas um article específico possuia as 2 classes que foram dadas como parâmetros. No caso "escondido" e "artigo-0".</h3>
+        <img src="assets/exemplo_dom_9.png">
 
         <footer class="botoes">
             <button onclick="voltarArtigo(2)">Voltar tópico</button>
-            <button onclick="voltarMenuPrincipal(2)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(2)">Voltar ao menu Principal</button>
             <button onclick="avancarArtigo(2)">Próximo tópico</button>
         </footer>
     </article>
 
-    <article class="escondido artigo-3">
+    <article class="artigo-3">
         <h1>O que é um "Element" no JavaScript?</h1>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(3)">Voltar tópico</button>
-            <button onclick="voltarMenuPrincipal(3)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(3)">Voltar ao menu Principal</button>
             <button onclick="avancarArtigo(3)">Próximo tópico</button>
         </footer>
     </article>
@@ -128,7 +181,7 @@
 
         <footer class="botoes">
             <button onclick="voltarArtigo(4)">Voltar tópico</button>
-            <button onclick="voltarMenuPrincipal(4)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(4)">Voltar ao menu Principal</button>
             <button onclick="avancarArtigo(4)">Próximo tópico</button>
         </footer>
     </article>
@@ -138,7 +191,7 @@
 
         <footer class="botoes">
             <button onclick="voltarArtigo(5)">Voltar tópico</button>
-            <button onclick="voltarMenuPrincipal(5)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(5)">Voltar ao menu Principal</button>
             <button onclick="avancarArtigo(5)">Próximo tópico</button>
         </footer>
     </article>
@@ -147,7 +200,7 @@
         <h1>Como criar elementos via JavaScript com "document.createElement" e "element.appendChild"</h1>
 
         <footer class="botoes">
-            <button onclick="voltarMenuPrincipal(6)">Voltar ao menu Principal</button>
+            <button onclick="alternarMenuArtigo(6)">Voltar ao menu Principal</button>
             <button onclick="voltarArtigo(6)">Voltar tópico</button>
         </footer>
     </article>
