@@ -89,6 +89,29 @@ div {
     flex-direction: column;
     align-items: center;
 }
+h5{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px auto;
+    border: 1px solid white;
+    padding: 5px;
+}
+pre{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px auto;
+    border: 1px solid white;
+    padding: 5px;
+}
+menu {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
 
 /* CLASSE PARA ESCONDER ELEMENTOS */
 .escondido {

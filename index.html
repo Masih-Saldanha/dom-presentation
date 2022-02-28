@@ -78,22 +78,29 @@
     <article class="escondido artigo-1">
         <h1>O que são os objetos "window" e "document"?</h1>
 
-        <h2>Agora que entendemos um pouco melhor o conceito básico de DOM podemos seguir para a definição de "Window" e "Document".</h2>
+        <h2>Agora que entendemos um pouco melhor o conceito básico de DOM podemos seguir para a definição de "Window" e
+            "Document".</h2>
 
         <h4>- Document:</h4>
 
         <img src="assets/exemplo_dom_2.PNG">
 
-        <h3>Retomando o exemplo anterior, vimos que "MENU" está armazenando a tag "main" para futura manipulação no Java Script.</h3>
+        <h3>Retomando o exemplo anterior, vimos que "MENU" está armazenando a tag "main" para futura manipulação no Java
+            Script.</h3>
         <h3>Sendo assim, ("main") representa a tag selecionada em si;</h3>
-        <h3>Já "QuerySelector" é, como o próprio nome sugere, o seletor que busca a tag ou classe, mas isso trataremos nos próximos tópicos;</h3>
+        <h3>Já "QuerySelector" é, como o próprio nome sugere, o seletor que busca a tag ou classe, mas isso trataremos
+            nos próximos tópicos;</h3>
         <h3>Por fim temos "document" que é a representação do documento HTML inteiro dentro do Java Script.</h3>
 
-        <h2>Ou seja, toda vez que chamamos "document" dentro do Java, estamos em última instância fazendo uma busca em todo o HTML ao qual o Script está relacionado.</h2>
+        <h2>Ou seja, toda vez que chamamos "document" dentro do Java, estamos em última instância fazendo uma busca em
+            todo o HTML ao qual o Script está relacionado.</h2>
 
         <h4>- Window:</h4>
 
-        <h2>Enquanto "Document" representa o HTML em si, "Window" representa a janela a qual o usuário está acessando o conteúdo. Um dos comandos mais comuns e que usaremos de exemplo do uso de "Window" é o "window.scrollTo(x, y)" o qual scrolla a tela de exibição diretamente para o valor de "x" na horizontal e para o valor de "y" na vertical. Considere as imagens abaixo:</h2>
+        <h2>Enquanto "Document" representa o HTML em si, "Window" representa a janela a qual o usuário está acessando o
+            conteúdo. Um dos comandos mais comuns e que usaremos de exemplo do uso de "Window" é o "window.scrollTo(x,
+            y)" o qual scrolla a tela de exibição diretamente para o valor de "x" na horizontal e para o valor de "y" na
+            vertical. Considere as imagens abaixo:</h2>
 
         <h3>Aqui temos a função que ao ser ativada, deve scrollar a tela do navegador 1000 pixels para baixo:</h3>
         <img src="assets/exemplo_dom_3.PNG">
@@ -117,12 +124,15 @@
     <article class="escondido artigo-2">
         <h1>Diferença de "getElementById", "getElementsByClassName", "querySelector", "querySelectorAll"</h1>
 
-        <h2>Esses comandos são seletores e servem (como o nome sugere) para selecionar qual ou quais elementos do HTML serão selecionados para manipulação pelo Java Script.</h2>
-        <h2>Além disso, é necessário compreender que esses seletores resgatam "nodes" a partir do HTML, mas isso veremos nos próximos tópicos, por enquanto concentremos nos seletores.</h2>
+        <h2>Esses comandos são seletores e servem (como o nome sugere) para selecionar qual ou quais elementos do HTML
+            serão selecionados para manipulação pelo Java Script.</h2>
+        <h2>Além disso, é necessário compreender que esses seletores resgatam "nodes" a partir do HTML, mas isso veremos
+            nos próximos tópicos, por enquanto concentremos nos seletores.</h2>
 
         <h4>- "querySelector(" ")":</h4>
 
-        <h2>Resumidamente ele busca a primeira tag ou classe descrita dentro do (" ") sendo que classes precisam ser precedidas de ponto para que possam ser buscadas.</h2>
+        <h2>Resumidamente ele busca a primeira tag ou classe descrita dentro do (" ") sendo que classes precisam ser
+            precedidas de ponto para que possam ser buscadas.</h2>
         <h2>Vejamos o seguinte exemplo:</h2>
 
         <h3>Aqui vemos a lista de Artigos dessa apresentação</h3>
@@ -131,32 +141,45 @@
         <h3>Agora tentemos usar os seguitnes comandos no console do browser:</h3>
         <img src="assets/exemplo_dom_6.png">
 
-        <h2>Como pudemos observar, apesar de haverem 7 articles, o ARTIGO_0 armazenou apenas o primeiro article. No entanto, se precisássemos armazenar todos os articles precisaríamos do próximo comando -></h2>
+        <h2>Como pudemos observar, apesar de haverem 7 articles, o ARTIGO_0 armazenou apenas o primeiro article. No
+            entanto, se precisássemos armazenar todos os articles precisaríamos do próximo comando -></h2>
 
         <h4>- "querySelectorAll(" ")":</h4>
 
-        <h2>Basicamente é a mesma coisa que o "querySelector" com a diferença que ele não seleciona apenas a primeira tag ou classe e sim todas com o mesmo nome, vejamos o exemplo:</h2>
+        <h2>Basicamente é a mesma coisa que o "querySelector" com a diferença que ele não seleciona apenas a primeira
+            tag ou classe e sim todas com o mesmo nome, vejamos o exemplo:</h2>
 
         <h3>Mais uma vez vamos ao console testar os seguintes comandos:</h3>
         <img src="assets/exemplo_dom_7.png">
 
-        <h2>Como podemons observar, a constante "ARTIGOS" está armazenando todos os "articles" presentes no HTML de forma semelhante a um array, porém NÃO É UM ARRAY e portanto não pode receber alguns comandos exclusivos de arrays como as HOF.</h2>
-        <h2>Além disso, é possível selecionar um dos elementos específicos ou iterá-los de forma semelhante a um array adicionando [índice] ao final de "ARTIGOS".</h2>
+        <h2>Como podemons observar, a constante "ARTIGOS" está armazenando todos os "articles" presentes no HTML de
+            forma semelhante a um array, porém NÃO É UM ARRAY e portanto não pode receber alguns comandos exclusivos de
+            arrays como as HOF.</h2>
+        <h2>Além disso, é possível selecionar um dos elementos específicos ou iterá-los de forma semelhante a um array
+            adicionando [índice] ao final de "ARTIGOS".</h2>
 
         <h4>- "getElementById(" ")":</h4>
 
-        <h2>É praticamente a mesma coisa do "querySelector" com a diferença sendo que ao invés de selecionar a primeira tag ou classe escolhida, ela seleciona a primeira "id" escolhida.</h2>
-        
+        <h2>É praticamente a mesma coisa do "querySelector" com a diferença sendo que ao invés de selecionar a primeira
+            tag ou classe escolhida, ela seleciona a primeira "id" escolhida.</h2>
+
         <h4>- "getElementsByClassName(" ")":</h4>
 
-        <h2>Por fim, temos o "getElementsByClassName(" ")" que seleciona os elementos HTML que tem as classes específicas escolhidas. Vejamos os exemplos para uma melhor compreensão:</h2>
+        <h2>Por fim, temos o "getElementsByClassName(" ")" que seleciona os elementos HTML que tem as classes
+            específicas escolhidas. Vejamos os exemplos para uma melhor compreensão:</h2>
 
-        <h3>Aqui, o parâmetro escolhido foi a classe "escondido", por isso a constante "ESCONDIDOS" recebeu uma HTMLCollection (um objeto com cada propriedade sendo um dos elementos selecionados e sendo cada um enumerado de forma semelhante a um array).</h3>
-        
-        <h3>Repare que "ESCONDIDOS" funciona de forma parecida com os arrays e nodes, porém (assim como os nodes) não pode receber comandos específicos de arrays como as HOF, mas ainda pode ser iterada com [índice] assim como os nodes.</h3>
+        <h3>Aqui, o parâmetro escolhido foi a classe "escondido", por isso a constante "ESCONDIDOS" recebeu uma
+            HTMLCollection (um objeto com cada propriedade sendo um dos elementos selecionados e sendo cada um enumerado
+            de forma semelhante a um array).</h3>
+
+        <h3>Repare que "ESCONDIDOS" funciona de forma parecida com os arrays e nodes, porém (assim como os nodes) não
+            pode receber comandos específicos de arrays como as HOF, mas ainda pode ser iterada com [índice] assim como
+            os nodes.</h3>
         <img src="assets/exemplo_dom_8.png">
 
-        <h3>Já no exemplo abaixo, vemos que a constante "ESCONDIDO_0" armazenou apenas um article como objeto de um HTMLCollection, isso ocorreu pois apenas um article específico possuia as 2 classes que foram dadas como parâmetros. No caso "escondido" e "artigo-0".</h3>
+        <h3>Já no exemplo abaixo, vemos que a constante "ESCONDIDO_0" armazenou apenas um article como objeto de um
+            HTMLCollection, isso ocorreu pois apenas um article específico possuia as 2 classes que foram dadas como
+            parâmetros. No caso "escondido" e "artigo-0".</h3>
         <img src="assets/exemplo_dom_9.png">
 
         <footer class="botoes">
@@ -169,7 +192,8 @@
     <article class="escondido artigo-3">
         <h1>O que é um "Element" no JavaScript?</h1>
 
-        <h2>"Elements" (ou elementos) são como chamamos os elementos do HTML que buscamos através dos seletores explicados anteriormente.</h2>
+        <h2>"Elements" (ou elementos) são como chamamos os elementos do HTML que buscamos através dos seletores
+            explicados anteriormente.</h2>
         <h2>Retomemos alguns exemplos anteriores para melhor compreensão:</h2>
 
         <h3>Aqui podemos ver que o article armazenado em "ARTIGO_0" é o elemento.</h3>
@@ -185,24 +209,42 @@
         </footer>
     </article>
 
-    <article class="artigo-4">
+    <article class="escondido artigo-4">
         <h1>Diferença de "innerHTML", "innerText" e "textContent"</h1>
 
-        <h2>Agora que entendemos melhor sobre os seletores, "Elements", "window" e "document" podemos avançar para os conceitos de "innerHTML", "innerText" e "textContent".</h2>
-        <h2>Tratam-se de propriedades que podemos usar dos elementos para manipulá-los diretamente na estrutura HTML como adicionar, substituir ou apagar tags internas da estrutura desse elemento por exemplo.</h2>
+        <h2>Agora que entendemos melhor sobre os seletores, "Elements", "window" e "document" podemos avançar para os
+            conceitos de "innerHTML", "innerText" e "textContent".</h2>
+        <h2>Tratam-se de propriedades que podemos usar dos elementos para manipulá-los diretamente na estrutura HTML
+            como adicionar, substituir ou apagar tags internas da estrutura desse elemento por exemplo.</h2>
 
+        <h4>Vejamos o exemplo a seguir:</h4>
+
+        <h5 id="h5">   Esse   elemento   tem   espaçamento   extra   e   contém   <span>um elemento span</span>.</h5>
+
+        <h3>Abaixo está a estrutura HTML da linha de cima:</h3>
+        <img src="assets/exemplo_dom_10.png">
+
+        <h3>Clique nos botões para retornar na tela as propriedades Inner to exemplo acima:</h3>
+        <menu class="botoes">
+            <button onclick="getinnerHTML()">Get innerHTML</button>
+            <button onclick="getinnerText()">Get innerText</button>
+            <button onclick="gettextContent()">Get textContent</button>
+        </menu>
+
+        <pre id="mostraInner"></pre>
+
+        <h2>Com isso podemos entender que:</h2>
         <h4>- "innerHTML":</h4>
 
-        <h2>Considere o retângulo abaixo:</h2>
-
-        <h3>O retângulo é uma div com a classe "div" que contém a tag "p"</h3>
-        <div class="div"><p>Esta é a tag 'p'</p></div>
+        <h2>Retorna toda a estrutura interna do elemento, incluindo tags. Ele serve principalmente para adicionar, remover ou alterar tags internas do elemento através do Java Script.</h2>
 
         <h4>- "innerText":</h4>
 
+        <h2>Retorna apenas o conteúdo textual interno do elemento, ignorando tags e espaçamentos. Serve principalmente para adicionar, remover ou alterar os textos internos do elemento através do Java Script.</h2>
+
         <h4>- "textContent":</h4>
 
-        <h2></h2>
+        <h2>Semelhante ao "innerText" com a diferença considerar espaçamentos extras.</h2>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(4)">Voltar tópico</button>
@@ -211,7 +253,7 @@
         </footer>
     </article>
 
-    <article class="escondido artigo-5">
+    <article class="artigo-5">
         <h1>Qual a diferença entre uma "NodeList" e uma array comum? Como transformar a "NodeList" em uma array?</h1>
 
         <footer class="botoes">

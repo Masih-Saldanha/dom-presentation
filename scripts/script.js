@@ -28,3 +28,18 @@ function voltarArtigo(numeroArtigo) {
 function descaAteOFinal() {
     window.scrollTo(0, 1000);
 }
+
+function getinnerText() {
+    let text = document.getElementById("h5").innerText;
+    document.getElementById("mostraInner").innerText = text;
+  }
+  
+  function getinnerHTML() {
+    let text = document.getElementById("h5").innerHTML;
+    document.getElementById("mostraInner").innerText = text;
+  }
+  
+  function gettextContent() {
+    let text = document.getElementById("h5").textContent;
+    document.getElementById("mostraInner").innerText = text;
+  }
