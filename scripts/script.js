@@ -1,13 +1,17 @@
 const MENU = document.querySelector("main");
+
 const LISTA_ARTIGOS = [];
 for (i = 0; i < 7; i++) {
-    LISTA_ARTIGOS[i] = document.querySelector(`.artigo-${i}`);
+    LISTA_ARTIGOS[i] = document.querySelectorAll(`article`)[i];
 }
+
 const DIV = document.querySelector(".div");
 
-console.log(MENU);
-console.log(LISTA_ARTIGOS);
-console.log(DIV);
+const LISTA_ARTIGOS_NODE = document.querySelectorAll("article");
+
+// console.log(MENU);
+// console.log(LISTA_ARTIGOS);
+// console.log(DIV);
 
 function alternarMenuArtigo(numeroArtigo) {
     LISTA_ARTIGOS[numeroArtigo].classList.toggle("escondido")

@@ -253,8 +253,18 @@
         </footer>
     </article>
 
-    <article class="artigo-5">
+    <article class="escondido artigo-5">
         <h1>Qual a diferença entre uma "NodeList" e uma array comum? Como transformar a "NodeList" em uma array?</h1>
+
+        <h2>Como vimos em tópicos anteriores, o comando "querySelectorAll(" ") retorna uma nodelist que funciona de forma parecida com um array, inclusive podendo-se utilizar [índice] para acessar tags ou classes específicas. No entanto (apesar de funcionar como um array) a nodelist não é um, ou seja, não pode receber métodos de array como "valueOf( )", "push( )", "pop( )", ou "join( )".</h2>
+        <h2>Por tanto, a nodelist apenas pode resgatar seus elementos e "length", mas não editá-los. Porém podemos armazenar cada um dos elementos de uma nodelist dentro de um array.</h2>
+
+        <h4>Consideremos o exemplo a seguir:</h4>
+
+        <h3>Aqui temos o array "LISTA_ARTIGOS" recebendo em cada [índice] um dos 7 articles.</h3>
+        <img src="assets/exemplo_dom_11.png">
+
+        <h2>Com isso, podemos utilizar "LISTA_ARTIGOS" no lugar de "document.querySelectorAll(" ")", uma vez que por "LISTA_ARTIGOS" ser um array ele pode receber mais edições como remoção ou adição de elementos do array com comandos como "pop( )", "push( )" respectivamente.</h2>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(5)">Voltar tópico</button>
@@ -263,12 +273,12 @@
         </footer>
     </article>
 
-    <article class="escondido artigo-6">
+    <article class="artigo-6">
         <h1>Como criar elementos via JavaScript com "document.createElement" e "element.appendChild"</h1>
 
         <footer class="botoes">
-            <button onclick="alternarMenuArtigo(6)">Voltar ao menu Principal</button>
             <button onclick="voltarArtigo(6)">Voltar tópico</button>
+            <button onclick="alternarMenuArtigo(6)">Voltar ao menu Principal</button>
         </footer>
     </article>
 
