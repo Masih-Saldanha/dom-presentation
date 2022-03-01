@@ -112,6 +112,10 @@ menu {
     justify-content: space-between;
     width: 500px;
 }
+menu ul {
+    border: 1px solid white;
+    padding: 10px;
+}
 
 /* CLASSE PARA ESCONDER ELEMENTOS */
 .escondido {

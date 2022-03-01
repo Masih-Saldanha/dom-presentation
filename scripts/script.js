@@ -14,18 +14,21 @@ const LISTA_ARTIGOS_NODE = document.querySelectorAll("article");
 // console.log(DIV);
 
 function alternarMenuArtigo(numeroArtigo) {
-    LISTA_ARTIGOS[numeroArtigo].classList.toggle("escondido")
-    MENU.classList.toggle("escondido")
+    LISTA_ARTIGOS[numeroArtigo].classList.toggle("escondido");
+    MENU.classList.toggle("escondido");
+    window.scrollTo(0, 0);
 }
 
 function avancarArtigo(numeroArtigo) {
-    LISTA_ARTIGOS[numeroArtigo].classList.add("escondido")
-    LISTA_ARTIGOS[numeroArtigo+1].classList.remove("escondido")
+    LISTA_ARTIGOS[numeroArtigo].classList.add("escondido");
+    LISTA_ARTIGOS[numeroArtigo + 1].classList.remove("escondido");
+    window.scrollTo(0, 0);
 }
 
 function voltarArtigo(numeroArtigo) {
-    LISTA_ARTIGOS[numeroArtigo].classList.add("escondido")
-    LISTA_ARTIGOS[numeroArtigo-1].classList.remove("escondido")
+    LISTA_ARTIGOS[numeroArtigo].classList.add("escondido");
+    LISTA_ARTIGOS[numeroArtigo - 1].classList.remove("escondido");
+    window.scrollTo(0, 0);
 }
 // const ULTIMA_IMAGEM = LISTA_ARTIGOS[1].childNodes[NUMERO];
 
@@ -36,14 +39,18 @@ function descaAteOFinal() {
 function getinnerText() {
     let text = document.getElementById("h5").innerText;
     document.getElementById("mostraInner").innerText = text;
-  }
-  
-  function getinnerHTML() {
+}
+function getinnerHTML() {
     let text = document.getElementById("h5").innerHTML;
     document.getElementById("mostraInner").innerText = text;
-  }
-  
-  function gettextContent() {
+}
+function gettextContent() {
     let text = document.getElementById("h5").textContent;
     document.getElementById("mostraInner").innerText = text;
-  }
+}
+
+function moverLista(numero1, numero2) {
+    const node = document.getElementById(`lista${numero2}`).lastElementChild;
+    document.getElementById(`lista${numero1}`).appendChild(node);
+    window.scrollTo(0, 1000);
+}

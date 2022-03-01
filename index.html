@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <main class="escondido">
+    <main class="">
         <h1>Sejam bem-vindos a aula de DOM!</h1>
         <ul>Hoje entederemos melhor o que é o DOM, suas características e funcionalidades:
             <li onclick="alternarMenuArtigo(0)" class="opcao-0 conceito-dom">
@@ -219,7 +219,7 @@
 
         <h4>Vejamos o exemplo a seguir:</h4>
 
-        <h5 id="h5">   Esse   elemento   tem   espaçamento   extra   e   contém   <span>um elemento span</span>.</h5>
+        <h5 id="h5"> Esse elemento tem espaçamento extra e contém <span>um elemento span</span>.</h5>
 
         <h3>Abaixo está a estrutura HTML da linha de cima:</h3>
         <img src="assets/exemplo_dom_10.png">
@@ -236,11 +236,13 @@
         <h2>Com isso podemos entender que:</h2>
         <h4>- "innerHTML":</h4>
 
-        <h2>Retorna toda a estrutura interna do elemento, incluindo tags. Ele serve principalmente para adicionar, remover ou alterar tags internas do elemento através do Java Script.</h2>
+        <h2>Retorna toda a estrutura interna do elemento, incluindo tags. Ele serve principalmente para adicionar,
+            remover ou alterar tags internas do elemento através do Java Script.</h2>
 
         <h4>- "innerText":</h4>
 
-        <h2>Retorna apenas o conteúdo textual interno do elemento, ignorando tags e espaçamentos. Serve principalmente para adicionar, remover ou alterar os textos internos do elemento através do Java Script.</h2>
+        <h2>Retorna apenas o conteúdo textual interno do elemento, ignorando tags e espaçamentos. Serve principalmente
+            para adicionar, remover ou alterar os textos internos do elemento através do Java Script.</h2>
 
         <h4>- "textContent":</h4>
 
@@ -256,15 +258,21 @@
     <article class="escondido artigo-5">
         <h1>Qual a diferença entre uma "NodeList" e uma array comum? Como transformar a "NodeList" em uma array?</h1>
 
-        <h2>Como vimos em tópicos anteriores, o comando "querySelectorAll(" ") retorna uma nodelist que funciona de forma parecida com um array, inclusive podendo-se utilizar [índice] para acessar tags ou classes específicas. No entanto (apesar de funcionar como um array) a nodelist não é um, ou seja, não pode receber métodos de array como "valueOf( )", "push( )", "pop( )", ou "join( )".</h2>
-        <h2>Por tanto, a nodelist apenas pode resgatar seus elementos e "length", mas não editá-los. Porém podemos armazenar cada um dos elementos de uma nodelist dentro de um array.</h2>
+        <h2>Como vimos em tópicos anteriores, o comando "querySelectorAll(" ") retorna uma nodelist que funciona de
+            forma parecida com um array, inclusive podendo-se utilizar [índice] para acessar tags ou classes
+            específicas. No entanto (apesar de funcionar como um array) a nodelist não é um, ou seja, não pode receber
+            métodos de array como "valueOf( )", "push( )", "pop( )", ou "join( )".</h2>
+        <h2>Por tanto, a nodelist apenas pode resgatar seus elementos e "length", mas não editá-los. Porém podemos
+            armazenar cada um dos elementos de uma nodelist dentro de um array.</h2>
 
         <h4>Consideremos o exemplo a seguir:</h4>
 
         <h3>Aqui temos o array "LISTA_ARTIGOS" recebendo em cada [índice] um dos 7 articles.</h3>
         <img src="assets/exemplo_dom_11.png">
 
-        <h2>Com isso, podemos utilizar "LISTA_ARTIGOS" no lugar de "document.querySelectorAll(" ")", uma vez que por "LISTA_ARTIGOS" ser um array ele pode receber mais edições como remoção ou adição de elementos do array com comandos como "pop( )", "push( )" respectivamente.</h2>
+        <h2>Com isso, podemos utilizar "LISTA_ARTIGOS" no lugar de "document.querySelectorAll(" ")", uma vez que por
+            "LISTA_ARTIGOS" ser um array ele pode receber mais edições como remoção ou adição de elementos do array com
+            comandos como "pop( )", "push( )" respectivamente.</h2>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(5)">Voltar tópico</button>
@@ -273,8 +281,49 @@
         </footer>
     </article>
 
-    <article class="artigo-6">
+    <article class="escondido artigo-6">
         <h1>Como criar elementos via JavaScript com "document.createElement" e "element.appendChild"</h1>
+
+        <h2>Além dos métodos mais comuns descritos anteriormente para manipulação da estrutura HTML de um documento,
+            temos 2 outros métodos bastante úteis que são o "document.createElement("tag")" e o
+            "element.appendChild("variável")".</h2>
+
+        <h4>- "document.createElement("tag")"</h4>
+        <h2>O "document.createElement("tag")" cria uma tag HTML, normalmente se armazena esse comando numa variável para
+            uso e manipulação posterior em conjunto com o "element.appendChild("variável")", mas isso veremos em
+            exemplos posteriores.</h2>
+        <h2>É importante destacar que para uma melhor visualização é interessante alterar o innerHTML, innerText ou
+            textContent da variável que está armazenando a tag.</h2>
+
+        <h4>- "element.appendChild("variável")"</h4>
+        <h2>Já o "element.appendChild("variável")" por sua vez é utilizado como parâmentro de algum seletor para
+            adicionar a "variável" (que foi obtida pelo "document.createElement("tag")") ao "document.seletor(" ")" como
+            um childNode.</h2>
+        <h2>Em outras palavras, ele funciona de forma análoga ao comando "array.push(" ")".</h2>
+
+        <h4>Exemplos:</h4>
+
+        <h2>Considere as seguintes imagens:</h2>
+        <h3>Aqui temos a estrutura HTML do exemplo mais abaixo:</h3>
+        <img src="assets/exemplo_dom_12.png">
+        <h3>Aqui está a estrutura da função referenciada nos botões:</h3>
+        <img src="assets/exemplo_dom_13.png">
+
+        <menu class="botoes">
+            <button onclick="moverLista(1, 2)">Mover para a esquerda</button>
+            <button onclick="moverLista(2, 1)">Mover para a direita</button>
+        </menu>
+        <menu>
+            <ul id="lista1">Lista 1:
+                <li>Maçã</li>
+                <li>Pêra</li>
+            </ul>
+
+            <ul id="lista2">Lista 2:
+                <li>Cupuaçu</li>
+                <li>Jaca</li>
+            </ul>
+        </menu>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(6)">Voltar tópico</button>
