@@ -5,13 +5,14 @@ for (i = 0; i < 7; i++) {
     LISTA_ARTIGOS[i] = document.querySelectorAll(`article`)[i];
 }
 
-const DIV = document.querySelector(".div");
-
 const LISTA_ARTIGOS_NODE = document.querySelectorAll("article");
 
-// console.log(MENU);
-// console.log(LISTA_ARTIGOS);
-// console.log(DIV);
+console.log(`Constante MENU: document.querySelector("main")`);
+console.log(MENU);
+console.log(`Constante LISTA_ARTIGOS: LISTA_ARTIGOS[i] = document.querySelectorAll("article")[i]`);
+console.log(LISTA_ARTIGOS);
+console.log(`Constante LISTA_ARTIGOS_NODE: LISTA_ARTIGOS_NODE = document.querySelectorAll("article")`);
+console.log(LISTA_ARTIGOS_NODE);
 
 function alternarMenuArtigo(numeroArtigo) {
     LISTA_ARTIGOS[numeroArtigo].classList.toggle("escondido");
