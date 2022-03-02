@@ -25,6 +25,10 @@ li {
 li:hover {
     color: red;
 }
+strong {
+    font-weight: 700;
+    color: red;
+}
 article {
     display: flex;
     flex-direction: column;
@@ -96,6 +100,10 @@ menu ul {
 }
 menu li {
     margin: 0;
+}
+.lista-itens {
+    border: 1px solid white;
+    flex-wrap: wrap;
 }
 
 /* CLASSE PARA ESCONDER ELEMENTOS */
