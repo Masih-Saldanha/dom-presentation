@@ -1,22 +1,30 @@
+const BODY = document.querySelector("body");
 const MENU = document.querySelector("main");
-
+const ESCONDIDOS = document.getElementsByClassName("escondido");
+const ESCONDIDO_0 = document.getElementsByClassName("escondido artigo-0");
 const LISTA_ARTIGOS = [];
 for (i = 0; i < 7; i++) {
     LISTA_ARTIGOS[i] = document.querySelectorAll(`article`)[i];
 }
-
-const BODY = document.querySelector("body");
-
 const LISTA_ARTIGOS_NODE = document.querySelectorAll("article");
+const ARTIGOS = LISTA_ARTIGOS_NODE;
+const ARTIGO_0 = document.querySelector("article")
 
-console.log(`Constante BODY: document.querySelector("BODY")`);
+console.log(`Constante BODY:`);
 console.log(BODY);
-console.log(`Constante MENU: document.querySelector("main")`);
+console.log(`Constante MENU:`);
 console.log(MENU);
-console.log(`Constante LISTA_ARTIGOS: LISTA_ARTIGOS[i] = document.querySelectorAll("article")[i]`);
+console.log(`Constante ESCONDIDOS:`);
+console.log(ESCONDIDOS);
+console.log(`Constante ESCONDIDO_0:`);
+console.log(ESCONDIDO_0);
+console.log(`Constante LISTA_ARTIGOS:`);
 console.log(LISTA_ARTIGOS);
-console.log(`Constante LISTA_ARTIGOS_NODE: LISTA_ARTIGOS_NODE = document.querySelectorAll("article")`);
+console.log("ARTIGOS = LISTA_ARTIGOS");
+console.log(`Constante LISTA_ARTIGOS_NODE:`);
 console.log(LISTA_ARTIGOS_NODE);
+console.log(`Constante ARTIGO_0:`);
+console.log(ARTIGO_0);
 
 function alternarMenuArtigo(numeroArtigo) {
     LISTA_ARTIGOS[numeroArtigo].classList.toggle("escondido");
