@@ -61,23 +61,20 @@ function gettextContent() {
     document.getElementById("mostraInner").innerText = text;
 }
 
-// const ARRAY_ITENS = [];
-// const LISTA_ITENS = document.querySelectorAll(".item");
-// const CONTAINER_ITENS = document.querySelector(".lista-itens");
-// const ITEM = document.querySelector(".item")
-// function adicionarItem() {
-//     for (i = 0; i < LISTA_ITENS.length; i++) {
-//         ARRAY_ITENS[i] = LISTA_ITENS[i];
-//     }
-//     ARRAY_ITENS.push(ITEM);
-//     CONTAINER_ITENS.innerHTML = "";
-//     for (i = 0; i < ARRAY_ITENS.length; i++){
-//         CONTAINER_ITENS.innerHTML += `
-//         ${ARRAY_ITENS[i].innerHTML}
-//         `
-//     }
-//     // console.log(ARRAY_ITENS);
-// }
+function listarTextoDosTitulos(array) {
+    let arrayFiltrado = array.map((node) => {
+        const listaDeTitulos = document.getElementById(`tiulos`);
+        if (listaDeTitulos.childElementCount < array.length) {
+            const ITEM = document.createElement("li");
+            ITEM.innerText = node.children[0].innerText;
+            listaDeTitulos.appendChild(ITEM);
+        }
+        return (node.children[0].innerText);
+    });
+    console.log(arrayFiltrado);
+    window.scrollTo(0, 2000);
+}
+
 function adicionarItem() {
     const ITEM = document.createElement("h5");
     ITEM.innerText = "Item";

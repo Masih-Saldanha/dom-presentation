@@ -212,7 +212,7 @@
         <h3>- Aqui podemos ver que o article armazenado em "ARTIGO_0" é o elemento.</h3>
         <img src="assets/exemplo_dom_06.png">
 
-        <h3>- Já aqui temos como elementos os 7 articles dentro do nodelist armazenado em "ARTIGOS".</h3>
+        <h3>- Já aqui temos como elementos os 7 articles dentro do NodeList armazenado em "ARTIGOS".</h3>
         <img src="assets/exemplo_dom_07.png">
 
         <footer class="botoes">
@@ -271,21 +271,31 @@
     <article class="escondido artigo-5">
         <h1>Qual a diferença entre uma "NodeList" e uma array comum? Como transformar a "NodeList" em uma array?</h1>
 
-        <h2>Como vimos em tópicos anteriores, o comando "querySelectorAll(" ") retorna uma nodelist que funciona de
+        <h2>Como vimos em tópicos anteriores, o comando "querySelectorAll(" ") retorna uma NodeList que funciona de
             forma parecida com um array, inclusive podendo-se utilizar [índice] para acessar tags ou classes
-            específicas. No entanto (apesar de funcionar como um array) a nodelist não é um, ou seja, não pode receber
-            métodos de array como "valueOf( )", "push( )", "pop( )", ou "join( )".</h2>
-        <h2>Por tanto, a nodelist apenas pode resgatar seus elementos e "length", mas não editá-los. Porém podemos
-            armazenar cada um dos elementos de uma nodelist dentro de um array.</h2>
+            específicas. No entanto (apesar de funcionar como um array) a NodeList não é um, ou seja, não pode receber
+            métodos de array como "valueOf( )", "push( )", "pop( )", ou "join( )", muito menos HOF.</h2>
+        <h2>Por tanto, a NodeList apenas pode resgatar seus elementos e "length", mas não editá-los. Porém podemos
+            armazenar cada um dos elementos de uma NodeList dentro de um array.</h2>
 
         <h4>Consideremos o exemplo a seguir:</h4>
 
         <h3>- Aqui temos o array "LISTA_ARTIGOS" recebendo em cada [índice] um dos 7 articles.</h3>
         <img src="assets/exemplo_dom_11.png">
+        <h3>- Já aqui temos a NodeList "LISTA_ARTIGOS_NODE" recebendo em cada [índice] um dos 7 articles.</h3>
+        <img src="assets/exemplo_dom_18.png">
+        <h3>- Abaixo estão a estrutura HTML dos botões e as funções armazenadas neles.</h3>
+        <img src="assets/exemplo_dom_19.png">
+        <img src="assets/exemplo_dom_20.png">
 
-        <h2>Com isso, podemos utilizar "LISTA_ARTIGOS" no lugar de "document.querySelectorAll(" ")", uma vez que por
-            "LISTA_ARTIGOS" ser um array ele pode receber mais edições como remoção ou adição de elementos do array com
-            comandos como "pop( )", "push( )" respectivamente.</h2>
+        <menu class="botoes">
+            <button onclick="listarTextoDosTitulos(LISTA_ARTIGOS)">Filtrar Array</button>
+            <button onclick="listarTextoDosTitulos(LISTA_ARTIGOS_NODE)">Filtrar NodeList</button>
+        </menu>
+
+        <ul class="lista-itens" id="tiulos"></ul>
+
+        <h2>Com isso, podemos concluir que o armazenamento de NodeLists em arrays é uma ferramenta poderosa quando precisarmos usar ferramentas como as HOF para extrair e manipular dados específicos das NodeLists.</h2>
 
         <footer class="botoes">
             <button onclick="voltarArtigo(5)">Voltar tópico</button>
